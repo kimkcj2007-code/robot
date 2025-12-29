@@ -44,7 +44,5 @@ int main(void)
         printf("불만족 (더 큰 모터나 감속비가 필요합니다!)\n");
     }
     
-
-
     return 0;
 }

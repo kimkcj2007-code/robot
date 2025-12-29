@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include <math.h>
+// math 함수 사용할 때, 터미널에 gcc 파일명.c -o 파일명 -lm을 쳐서 [컴파일]하고
+// ./파일명으로 [실행]하면 결과가 나온다. 
 int main(void)
 {
     printf("Be happy\n");
@@ -26,11 +29,20 @@ int main(void)
         }
     }
     printf("a : %d, b : %d\n", a, b);
-
-
-
-
     
+    double x, y;
+    printf("실수 x 입력: ");
+    scanf("%lf", &x);
+    printf("실수 y 입력: ");
+    scanf("%lf", &y);
+
+    printf("\n[math.h 함수 예제\n");
+    printf("sqrt(x) = %.4lf\n", sqrt(x));//제곱근
+    printf("pow(x) = %.4lf\n", pow(x, y)); // 거듭제곱
+    printf("sin(x) = %.4lf\n", sin(x));  
+    printf("cos(x) = %.4lf\n", cos(x));
+    printf("log(x) = %.4lf\n", log(x));       
+    printf("fabs(x) = %.4lf\n", fabs(x));
     return 0;
 }
 

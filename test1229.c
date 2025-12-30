@@ -2,6 +2,7 @@
 #include <math.h>
 // math 함수 사용할 때, 터미널에 gcc 파일명.c -o 파일명 -lm을 쳐서 [컴파일]하고
 // ./파일명으로 [실행]하면 결과가 나온다. 
+// 아마 한번 껐다 키면 다시 gcc 컴파일부터 해줘야하는걸로 확인됨
 int main(void)
 {
     printf("Be happy\n");
@@ -39,10 +40,10 @@ int main(void)
     printf("\n[math.h 함수 예제\n");
     printf("sqrt(x) = %.4lf\n", sqrt(x));//제곱근
     printf("pow(x) = %.4lf\n", pow(x, y)); // 거듭제곱
-    printf("sin(x) = %.4lf\n", sin(x));  
-    printf("cos(x) = %.4lf\n", cos(x));
-    printf("log(x) = %.4lf\n", log(x));       
-    printf("fabs(x) = %.4lf\n", fabs(x));
+    printf("sin(x) = %.4lf\n", sin(x));  //sin값 
+    printf("cos(x) = %.4lf\n", cos(x));  //cos값
+    printf("log(x) = %.4lf\n", log(x));  //log값 
+    printf("fabs(x) = %.4lf\n", fabs(x));  //실수 숫자의 절대값(양수)
     return 0;
 }
 

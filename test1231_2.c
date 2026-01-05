@@ -1,3 +1,4 @@
+// 12월 31일 수업2 + 1월 5일 수업
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -6,6 +7,8 @@
 // gcc filename.c -o filename -lm  //터미널 창에서 컴파일(실행준비)
 // ./filename  //터미널 창에서 실행
 
+// (12.30) 히스테리시스 배터리 잔량코드 
+/*
 int main(void)
 {   
 
@@ -64,8 +67,55 @@ int main(void)
     }
 
 
-
-
-        
     return 0;
+}
+*/ //히스테리시스 배터리 잔량코드
+
+// 강의자료 1-2 IR센서 반사값 임계치 분류기
+int threshold_class(int a, int b, int thres);
+int main(void)
+{
+    int N, threshold;
+    int black_count = 0;
+    printf("적외선 센서 개수 입력: ");
+    scanf("%d", &N);
+
+    int value[N];
+    for(int i=0;i<N;i++)
+    {   
+        printf("센서 값 입력: ");
+        scanf("%d", &value[i]);
+    }
+    printf("임계값 입력: ");
+    scanf("%d", &threshold);
+
+    printf("label = ");
+    for(int j = 0;j<N;j++)
+    {
+        black_count += threshold_class(j, value[j], threshold);
+    }
+    printf("\n");
+    printf("black_count = %d\n", black_count);
+    return 0;
+}
+
+int threshold_class(int x, int y, int thres)
+{
+    // x는 배열 몇번째인지, y는 배열요소
+    int a, b = 0;
+    int black =0;
+    if(y > thres)
+    {
+        b = 1;
+        printf("%d ", b);
+        black = 1;
+    }
+    else if(y <= thres)
+    {
+        b = 0;
+        printf("%d ", b);
+        black = 0;
+    }
+
+    return black; 
 }

@@ -1,4 +1,4 @@
-// 1월 6일 수업
+// 1월 6일 수업 문자열과 포인터 + 배열
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -203,7 +203,7 @@ int main(void)
     //문자열 문제
     // 고려해야 할 점: scanf. gets, fgets puts, fputs, 개행문제 처리(삭제)
     // 개행 문자를 포함하는가? 줄바꿈을 하는가? 등을 잘 생각해보자 
-
+    /*
     char ani[20];
     char why[80];
     printf("좋아하는 동물 : ");
@@ -215,8 +215,17 @@ int main(void)
     //printf("%d", why[0]);  //getchar()로 버퍼해소하지 않았을 때, why맨앞자리에는 개행문자가 들어간다. 
 
     return 0;
+    */
+   int res;
+   char ch;
 
-
+   while(1)
+   {
+        res = scanf("%c",&ch);
+        if(res == -1) break;
+        printf("%d ", ch);
+   }
+   return 0;
 
 }   
 
